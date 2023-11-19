@@ -8,9 +8,7 @@ const DesignGeneratorScreen = () => {
         <Text style={styles.subtitle}>Generate Your Very Own Dress Design</Text>
       </View>
       <View style={styles.content}>
-        <Image style={styles.image} source={{
-        uri: "https://tinyurl.com/42evm3m3"
-      }} />
+        <Image style={styles.image} source={require("./Untitled (95).png")} />
       </View>
     </SafeAreaView>;
 };
