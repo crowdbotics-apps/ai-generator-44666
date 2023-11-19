@@ -1,64 +1,46 @@
-import React from "react"
-import {
-  View,
-  Image,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet
-} from "react-native"
+import React from "react";
+import { SafeAreaView, View, Text, Image, StyleSheet } from "react-native";
 
-const WelcomeScreen = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.group} />
-        <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
-          <Text style={styles.text}>
-            Let's build something amazing together!
-          </Text>
-        </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
+const DesignGeneratorScreen = () => {
+  return <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.title}>AI Graphic Design Generator</Text>
+        <Text style={styles.subtitle}>Generate Your Very Own Dress Design</Text>
+      </View>
+      <View style={styles.content}>
+        <Image style={styles.image} source={{
+        uri: "https://tinyurl.com/42evm3m3"
+      }} />
+      </View>
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F8F8FC",
-    height: "100%"
-  },
-  scrollView: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "space-between",
+    backgroundColor: "#fff"
+  },
+  header: {
     padding: 20
   },
-  group: {
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#333"
+  },
+  subtitle: {
+    fontSize: 18,
+    color: "#666"
+  },
+  content: {
+    flex: 1,
+    justifyContent: "center",
     alignItems: "center"
   },
-  logo: {
-    height: 180,
-    width: 180,
-    padding: 40,
-    borderRadius: 30,
-    margin: 40
-  },
-  text: {
-    textAlign: "center",
-    fontSize: 28,
-    color: "#828AB0",
-    fontWeight: 700
-  },
-  footer: {
-    textAlign: "center",
-    fontSize: 18,
-    color: "#828AB0",
-    fontWeight: 700,
-    marginBottom: 20
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "contain"
   }
-})
-
-export default WelcomeScreen
+});
+export default DesignGeneratorScreen;
